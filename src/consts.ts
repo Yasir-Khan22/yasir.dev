@@ -27,7 +27,6 @@ export const NAV_LINKS: Link[] = [
   { href: '/authors', label: 'authors' },
   { href: '/about', label: 'about' },
   { href: '/tags', label: 'tags' },
-  { href: '/learn git', label: 'learn git' },
 ]
 
 export const SOCIAL_LINKS: Link[] = [
