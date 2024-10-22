@@ -2,10 +2,17 @@
 import Breadcrumbs from '@/components/Breadcrumbs.astro'
 import Container from '@/components/Container.astro'
 import ProjectCard from '@/components/ProjectCard.astro'
+import Link from '@/components/Link.astro'
 import { SITE } from '@/consts'
 import Layout from '@/layouts/Layout.astro'
 import { getCollection } from 'astro:content'
-
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card'
 const projects = await getCollection('projects')
 ---
 
@@ -15,11 +22,61 @@ const projects = await getCollection('projects')
 
     <section>
       <div class="min-w-full">
-        <h1 class="mb-4 text-3xl font-bold">Some more about us</h1>
+<section>
+      <Card>
+        <!-- <CardHeader>
+          <CardTitle className="text-3xl">'ya·sir</CardTitle>
+          <CardDescription
+            >/ˈyɑː.sɪr/ &bull; <span class="font-semibold">adjective</span
+            ></CardDescription
+          >
+        </CardHeader> -->
+        <CardContent>
+          <p class="mb-2 text-sm text-muted-foreground">
+            astro-erudite is an opinionated, no-frills static blogging template
+            built with <Link
+              href="https://astro.build"
+              class="text-foreground"
+              external
+              underline>Astro</Link
+            >, <Link
+              href="https://tailwindcss.com"
+              class="text-foreground"
+              external
+              underline>Tailwind</Link
+            >, and <Link
+              href="https://ui.shadcn.com"
+              class="text-foreground"
+              external
+              underline>shadcn/ui</Link
+            >. Extraordinarily loosely based on the <Link
+              href="https://astro-micro.vercel.app/"
+              class="text-foreground"
+              external
+              underline>Astro Micro</Link
+            > theme.
+          </p>
+          <p class="text-sm text-muted-foreground">
+            To use this template, check out the <Link
+              href="https://github.com/jktrn/astro-erudite"
+              class="text-foreground"
+              underline
+              external>GitHub</Link
+            > repository. To learn more about why this template exists, read this
+            blog post: <Link
+              href="/blog/the-state-of-static-blogs"
+              class="text-foreground"
+              underline>The State of Static Blogs in 2024</Link
+            >.
+          </p>
+        </CardContent>
+      </Card>
+    </section>
+        <!-- <h1 class="mb-4 text-3xl font-bold">Some more about us</h1>
         <p class="prose prose-neutral mb-8 dark:prose-invert">
           {SITE.TITLE} is an opinionated, no-frills static blogging template built
           with Astro.
-        </p>
+        </p> -->
 
         <h2 class="mb-4 text-2xl font-semibold">Our Projects</h2>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
