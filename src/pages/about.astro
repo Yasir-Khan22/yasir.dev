@@ -19,21 +19,10 @@ const projects = await getCollection('projects')
 <Layout title="About" description={SITE.DESCRIPTION}>
   <Container class="flex flex-col gap-y-6">
     <Breadcrumbs items={[{ label: 'About', icon: 'lucide:info' }]} />
-
-    <section>
-      <div class="min-w-full">
-<section>
       <Card>
-        <!-- <CardHeader>
-          <CardTitle className="text-3xl">'ya·sir</CardTitle>
-          <CardDescription
-            >/ˈyɑː.sɪr/ &bull; <span class="font-semibold">adjective</span
-            ></CardDescription
-          >
-        </CardHeader> -->
         <CardContent>
-          <p class="mb-2 text-sm text-muted-foreground">
-            astro-erudite is an opinionated, no-frills static blogging template
+          <p class="mt-3 mb-2 text-sm text-muted-foreground">
+            It's an opinionated, no-frills static blogging template
             built with <Link
               href="https://astro.build"
               class="text-foreground"
@@ -50,7 +39,7 @@ const projects = await getCollection('projects')
               external
               underline>shadcn/ui</Link
             >. Extraordinarily loosely based on the <Link
-              href="https://astro-micro.vercel.app/"
+              href="https://github.com/yasir-khan22"
               class="text-foreground"
               external
               underline>Astro Micro</Link
@@ -61,24 +50,11 @@ const projects = await getCollection('projects')
               href="https://github.com/jktrn/astro-erudite"
               class="text-foreground"
               underline
-              external>GitHub</Link
-            > repository. To learn more about why this template exists, read this
-            blog post: <Link
-              href="/blog/the-state-of-static-blogs"
-              class="text-foreground"
-              underline>The State of Static Blogs in 2024</Link
-            >.
-          </p>
+              external>GitHub</Link> repository. </p>
         </CardContent>
       </Card>
     </section>
-        <!-- <h1 class="mb-4 text-3xl font-bold">Some more about us</h1>
-        <p class="prose prose-neutral mb-8 dark:prose-invert">
-          {SITE.TITLE} is an opinionated, no-frills static blogging template built
-          with Astro.
-        </p> -->
-
-        <h2 class="mb-4 text-2xl font-semibold">Our Projects</h2>
+        <h2 class="mb-2 text-2xl font-semibold">Our Projects</h2>
         <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {projects.map((project) => <ProjectCard project={project} />)}
         </div>
